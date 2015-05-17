@@ -3,6 +3,9 @@
 
     <link rel="stylesheet" type="text/css" href="css/silverfox.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link href="css/style.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow|Karla' rel='stylesheet' type='text/css'>
 
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
@@ -163,9 +166,11 @@
             'pieHole': 0.4,
             'backgroundColor': '#eae8e8',
             'legend':'bottom',
-            'colors': ['#666666', '#cf2e02', '#969696', '#dbdbdb', '#eae8e8', '#d95835']
+            'colors': ['#f0854b', '#eb6a43', '#dc5133', '#c13827']
           }
         });
+
+
 
         // Establish dependencies, declaring that 'filter' drives 'pieChart',
         // so that the pie chart will only display entries that are let through
@@ -200,13 +205,28 @@
 
   <body onload="calculate()">
 
-    <div class="row"></div>
+    <div class="row">
+
+    </div>
+
     
+    
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4" align="center">
+          <div id="logo" ><img src="img/SILVERFOXFINTECH.png"/></div>
+          <h1>SilverFox</h1>
+        </br>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
+
     <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <div class="input-group">
-          <span class="input-group-addon">Total Pension Pot</span>
+          <span class="input-group-addon">Total Pension Pot &#163;</span>
           <input type="text" class="form-control" id="pension_pot"  placeholder="1000000" value="1000000" onchange="changed()">
         </div>
       </div>
@@ -217,7 +237,7 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <div class="input-group">
-          <span class="input-group-addon">Monthly Outgoings</span>
+          <span class="input-group-addon">Monthly Outgoings &#163;</span>
           <input type="text" class="form-control" id="monthly_spending"  placeholder="3000" value="3333" onchange="changed()">
         </div>
       </div>
@@ -228,7 +248,7 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <div class="input-group">
-          <span class="input-group-addon">Other Monthly Income</span>
+          <span class="input-group-addon">Other Monthly Income &#163;</span>
           <input type="text" class="form-control" id="monthly_income"  placeholder="2000" value="2000" onchange="changed()">
         </div>
       </div>
@@ -250,7 +270,7 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <div class="input-group">
-          <span class="input-group-addon">Lump Sum</span>
+          <span class="input-group-addon">Lump Sum &#163;</span>
           <input type="text" class="form-control" id="lump_sum"  placeholder="300000" value="300000" onchange="changed()">
         </div>
       </div>
@@ -283,6 +303,15 @@
       </div>
       <div class="col-md-4"></div>
     </div>
+
+    <div class="row" id="calc_button">
+      <div class="col-md-5"></div>
+      <div class="col-md-2">
+        <a class="btn btn-default center-block"  href="output.html">Result Options</a>
+      </div>
+      <div class="col-md-5"></div>
+    </div>
+
 
 
 

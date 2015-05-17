@@ -9,9 +9,11 @@ html{
 body{
  min-height:100%;
  background-image: url('color10.png');
-  background-repeat: no-repeat;
+  background-repeat: repeat;
   background-size: cover;
  }
+
+
 
 
 

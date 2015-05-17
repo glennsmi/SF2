@@ -4,6 +4,7 @@
 
 body {
     background-image: url('color10.png');
+    background-repeat: repeat;
 }
 
 h1 {
@@ -21,5 +22,9 @@ h1 {
 
 #chart_dive {
 	opacity : 0;
+}
+
+#logo {
+	padding-top : 15px;
 }
 
