@@ -19,3 +19,7 @@ h1 {
 	padding : 20px;
 }
 
+#chart_dive {
+	opacity : 0;
+}
+

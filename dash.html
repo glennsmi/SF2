@@ -17,6 +17,7 @@
       var ANNUITY_RATE_AT_55 = 4;
       var PERCENTAGE_DENOMINATOR = 100;
 
+
       function Calculator (pensionPot, monthlySpending, monthlyIncome, retirementAge) {
           this.pensionPot = pensionPot;
           this.monthlySpending = monthlySpending;
@@ -111,12 +112,13 @@
           'chartType': 'PieChart',
           'containerId': 'chart_div',
           'options': {
-            'width': 500,
-            'height': 500,
+            'width': 400,
+            'height': 400,
             'pieSliceText': 'value',
             'legend': 'right',
             'pieHole': 0.4,
             'backgroundColor': '#eae8e8',
+            'legend':'bottom',
             'colors': ['#666666', '#cf2e02', '#969696', '#dbdbdb', '#eae8e8', '#d95835']
           }
         });
@@ -148,15 +150,16 @@
     </script>
   </head>
 
-  <body>
+  <body onload="calculate()">
+
     <div class="row"></div>
     
     <div class="row">
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <div class="input-group">
-          <span class="input-group-addon">£</span>
-          <input type="text" class="form-control" id="pension_pot"  placeholder="Total Pension Pot">
+          <span class="input-group-addon">Total Pension Pot</span>
+          <input type="text" class="form-control" id="pension_pot"  placeholder="1000000" value="1000000">
         </div>
       </div>
       <div class="col-md-4"></div>
@@ -166,8 +169,8 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <div class="input-group">
-          <span class="input-group-addon">£</span>
-          <input type="text" class="form-control" id="monthly_spending"  placeholder="Monthly Outgoings">
+          <span class="input-group-addon">Monthly Outgoings</span>
+          <input type="text" class="form-control" id="monthly_spending"  placeholder="3000" value="3333">
         </div>
       </div>
       <div class="col-md-4"></div>
@@ -177,8 +180,8 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <div class="input-group">
-          <span class="input-group-addon">£</span>
-          <input type="text" class="form-control" id="monthly_income"  placeholder="Other Monthly Income">
+          <span class="input-group-addon">Other Monthly Income</span>
+          <input type="text" class="form-control" id="monthly_income"  placeholder="2000" value="2000">
         </div>
       </div>
       <div class="col-md-4"></div>
@@ -188,8 +191,8 @@
       <div class="col-md-4"></div>
       <div class="col-md-4">
         <div class="input-group">
-          <span class="input-group-addon">£</span>
-          <input type="text" class="form-control" id="retirement_age"  placeholder="Age at Retirement">
+          <span class="input-group-addon">Retirement Age</span>
+          <input type="text" class="form-control" id="retirement_age"  placeholder="60" value="60">
         </div>
       </div>
       <div class="col-md-4"></div>
