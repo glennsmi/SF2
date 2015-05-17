@@ -163,8 +163,13 @@
             'height': 600,
             'pieSliceText': 'value',
             'legend': 'right',
+<<<<<<< HEAD
             'pieHole': 0.4,
             'backgroundColor': {fill:'transparent'},
+=======
+            'pieHole': 0.6,
+            'backgroundColor': 'rgba(255,255,255,0.1)',
+>>>>>>> background styling
             'legend':'bottom',
             'colors': ['#f0854b', '#eb6a43', '#dc5133', '#c13827']
           }
@@ -203,7 +208,7 @@
     </script>
   </head>
 
-  <body onload="calculate()">
+  <body onLoad="calculate()">
 
     <div class="row">
 
@@ -227,7 +232,7 @@
       <div class="col-md-4">
         <div class="input-group">
           <span class="input-group-addon">Total Pension Pot &#163;</span>
-          <input type="text" class="form-control" id="pension_pot"  placeholder="1000000" value="1000000" onchange="changed()">
+          <input type="text" class="form-control" id="pension_pot"  placeholder="1000000" value="1000000" onChange="changed()">
         </div>
       </div>
       <div class="col-md-4"></div>
@@ -238,7 +243,7 @@
       <div class="col-md-4">
         <div class="input-group">
           <span class="input-group-addon">Monthly Outgoings &#163;</span>
-          <input type="text" class="form-control" id="monthly_spending"  placeholder="3000" value="3333" onchange="changed()">
+          <input type="text" class="form-control" id="monthly_spending"  placeholder="3000" value="3333" onChange="changed()">
         </div>
       </div>
       <div class="col-md-4"></div>
@@ -249,7 +254,7 @@
       <div class="col-md-4">
         <div class="input-group">
           <span class="input-group-addon">Other Monthly Income &#163;</span>
-          <input type="text" class="form-control" id="monthly_income"  placeholder="2000" value="2000" onchange="changed()">
+          <input type="text" class="form-control" id="monthly_income"  placeholder="2000" value="2000" onChange="changed()">
         </div>
       </div>
       <div class="col-md-4"></div>
@@ -260,7 +265,7 @@
       <div class="col-md-4">
         <div class="input-group">
           <span class="input-group-addon">Retirement Age</span>
-          <input type="text" class="form-control" id="retirement_age"  placeholder="60" value="60" onchange="changed()">
+          <input type="text" class="form-control" id="retirement_age"  placeholder="60" value="60" onChange="changed()">
         </div>
       </div>
       <div class="col-md-4"></div>
@@ -271,7 +276,7 @@
       <div class="col-md-4">
         <div class="input-group">
           <span class="input-group-addon">Lump Sum &#163;</span>
-          <input type="text" class="form-control" id="lump_sum"  placeholder="300000" value="300000" onchange="changed()">
+          <input type="text" class="form-control" id="lump_sum"  placeholder="300000" value="300000" onChange="changed()">
         </div>
       </div>
       <div class="col-md-4"></div>
@@ -280,7 +285,7 @@
     <div class="row" id="calc_button">
       <div class="col-md-5"></div>
       <div class="col-md-2">
-        <button type="button" class="btn btn-default center-block" onclick="calculate();">Calculate</button>
+        <button type="button" class="btn btn-default center-block" onClick="calculate();">Calculate</button>
       </div>
       <div class="col-md-5"></div>
     </div>
@@ -307,7 +312,7 @@
     <div class="row" id="calc_button">
       <div class="col-md-5"></div>
       <div class="col-md-2">
-        <a class="btn btn-default center-block"  href="output.html">Result Options</a>
+        <a class="btn btn-default center-block btn2"  href="output.html">Result Options</a>
       </div>
       <div class="col-md-5"></div>
     </div>
