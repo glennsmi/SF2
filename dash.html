@@ -1,5 +1,9 @@
 <html>
   <head>
+
+    <link rel="stylesheet" type="text/css" href="css/silverfox.css">
+
+
     <!--Load the AJAX API-->
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
@@ -110,7 +114,9 @@
             'height': 500,
             'pieSliceText': 'value',
             'legend': 'right',
-            'pieHole': 0.4
+            'pieHole': 0.4,
+            'backgroundColor': '#eae8e8',
+            'colors': ['#666666', '#cf2e02', '#969696', '#dbdbdb', '#eae8e8', '#d95835']
           }
         });
 
@@ -149,7 +155,7 @@
     <button type="button" onclick="calculate();">Calculate</button>
 
     <!--Div that will hold the dashboard-->
-    <div id="dashboard_div">
+    <div id="dashboard_div" >
       <!--Divs that will hold each control and chart-->
       
       <div id="chart_div"></div>
