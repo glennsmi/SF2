@@ -8,13 +8,24 @@ html{
  }
 body{
  min-height:100%;
- background-image: url('Color10-.png');
-  background-repeat: no-repeat;
-  background-size: cover;
- }
+ background-image: url('Color10.png');
+ background-repeat: no-repeat;
+ background-size: cover;
+}
 
+#dash_body {
+  background-image: url('Color10_jagged.png');
+}
 
+.annuity_options{
 
+  font-size: 2em;
+}
+
+.annuity_options_comment{
+
+  font-size: 1em;
+}
 
 
 h1 {font-family: 'PT Sans Narrow', sans-serif;

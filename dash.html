@@ -203,7 +203,7 @@
     </script>
   </head>
 
-  <body onLoad="calculate()">
+  <body onload="calculate()" id="dash_body">
 
     <div class="row">
 
@@ -288,11 +288,12 @@
     <!--Div that will hold the dashboard-->
     <div id="dashboard_div"  class="row">
       <!--Divs that will hold each control and chart-->
-      <div class="col-md-4"></div>
-      <div class="col-md-4">
-        <div id="chart_div"></div>
+     <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div id="chart_div" class="center-block"></div>
       </div>
-      <div class="col-md-4"></div>
+      <div class="col-md-3"></div>
+     
     </div>
 
     <div id="dashboard_div_filter"  class="row" hidden >
