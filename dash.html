@@ -124,17 +124,14 @@
       }
 
       function calculate() {
-        var calculator = new Calculator(1000000, 4000, 2000, 65);
-        calculator.setLumpSum(300000);
 
-        document.getElementById("pension_pot_for_annuity").innerHTML
-              = "Pension invested into Annuity: ".concat(calculator.pensionForAnnuity());
-        document.getElementById("lump_amount_minus_tax").innerHTML
-              = "Lump Sum Minus Tax: ".concat(calculator.lumpAmountMinusTax());
-        document.getElementById("investment_amount").innerHTML
-              = "Investment Amount: ".concat(calculator.investmentAmount());
-        document.getElementById("tax_paid_from_lump").innerHTML
-              = "Tax Paid on Lump Sum: ".concat(calculator.taxPaid());
+        var pensionPot = document.getElementById("pension_pot").value;
+        var monthlyIncome = document.getElementById("monthly_income").value;
+        var monthlySpending = document.getElementById("monthly_spending").value;
+        var retirementAge = document.getElementById("retirement_age").value;
+
+        var calculator = new Calculator(pensionPot, monthlySpending, monthlyIncome, retirementAge);
+        calculator.setLumpSum(300000);
 
         drawDashboard(calculator.pensionForAnnuity(),
                       calculator.lumpAmountMinusTax(),
@@ -145,11 +142,11 @@
   </head>
 
   <body>
+    Pension Pot: <input id="pension_pot"/><br/>
+    Monthly Income: <input id="monthly_income"/><br/>
+    Monthly Spending: <input id="monthly_spending"/><br/>
+    Retirement Age: <input id="retirement_age"/><br/>
     <button type="button" onclick="calculate();">Calculate</button>
-    <p id="pension_pot_for_annuity"></p>
-    <p id="lump_amount_minus_tax"></p>
-    <p id="investment_amount"></p>
-    <p id="tax_paid_from_lump"></p>
 
     <!--Div that will hold the dashboard-->
     <div id="dashboard_div">
