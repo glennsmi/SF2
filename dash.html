@@ -4,6 +4,70 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript">
 
+      var INCOME_TAX = 0.2;
+      var RETIREMENT_AGE_BASE = 55;
+      var PENSION_LIMIT = 0.25;
+      var MONTHS_IN_YEAR = 12;
+      var ANNUITY_RATE_PER_YEAR = 0.1;
+      var ANNUITY_RATE_AT_55 = 4;
+      var PERCENTAGE_DENOMINATOR = 100;
+
+      function Calculator (pensionPot, monthlySpending, monthlyIncome, retirementAge) {
+          this.pensionPot = pensionPot;
+          this.monthlySpending = monthlySpending;
+          this.monthlyIncome = monthlyIncome;
+          this.retirementAge = retirementAge;
+
+          this.setLumpSum = function(lumpSum) {
+              return this.lumpSum = lumpSum;
+          };
+
+          this.monthlyAnnuityRequirement = function() {
+            return Math.max(this.monthlySpending - this.monthlyIncome, 0);
+          }
+
+          this.yearlyAnnuityRequirement = function() {
+            return this.monthlyAnnuityRequirement() * MONTHS_IN_YEAR;
+          }
+
+          this.annuityRate  = function() {
+            return ((this.retirementAge - RETIREMENT_AGE_BASE) * ANNUITY_RATE_PER_YEAR + ANNUITY_RATE_AT_55)
+                / PERCENTAGE_DENOMINATOR;
+          }
+
+          this.pensionForAnnuity  = function() {
+              return this.yearlyAnnuityRequirement() / this.annuityRate();
+          }
+
+          this.pensionLeftOver  = function() {
+            return this.pensionPot - this.pensionForAnnuity();
+          }
+
+          this.percentageOfPension  = function() {
+            return this.lumpSum / this.pensionPot;
+          }
+
+          this.amountOverLimit  = function() {
+            return Math.max(this.percentageOfPension() - PENSION_LIMIT, 0);
+          }
+
+          this.taxableLumpSum  = function() {
+            return this.pensionPot * this.amountOverLimit();
+          }
+
+          this.taxPaid  = function() {
+            return this.taxableLumpSum() * INCOME_TAX;
+          }
+
+          this.lumpAmountMinusTax  = function() {
+            return this.lumpSum - this.taxPaid();
+          }
+
+          this.investmentAmount  = function() {
+            return this.pensionPot - this.lumpSum - this.pensionForAnnuity();
+          }
+      }
+
       // Load the Visualization API and the controls package.
       google.load('visualization', '1.0', {'packages':['controls']});
 
@@ -58,10 +122,30 @@
         // Draw the dashboard.
         dashboard.draw(data);
       }
+
+      function calculate() {
+        var calculator = new Calculator(1000000, 4000, 2000, 65);
+        calculator.setLumpSum(300000);
+
+        document.getElementById("pension_pot_for_annuity").innerHTML
+              = "Pension invested into Annuity: ".concat(calculator.pensionForAnnuity());
+        document.getElementById("lump_amount_minus_tax").innerHTML
+              = "Lump Sum Minus Tax: ".concat(calculator.lumpAmountMinusTax());
+        document.getElementById("investment_amount").innerHTML
+              = "Investment Amount: ".concat(calculator.investmentAmount());
+        document.getElementById("tax_paid_from_lump").innerHTML
+              = "Tax Paid on Lump Sum: ".concat(calculator.taxPaid());
+      }
     </script>
   </head>
 
   <body>
+    <button type="button" onclick="calculate();">Calculate</button>
+    <p id="pension_pot_for_annuity"></p>
+    <p id="lump_amount_minus_tax"></p>
+    <p id="investment_amount"></p>
+    <p id="tax_paid_from_lump"></p>
+
     <!--Div that will hold the dashboard-->
     <div id="dashboard_div">
       <!--Divs that will hold each control and chart-->
