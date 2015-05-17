@@ -1,0 +1,473 @@
+@CHARSET "UTF-8";
+
+body, .sure_sense_navbar{
+	background-image: url('/BS_Site/Images/furley_bg.png'); 
+	background-repeat:repeat;
+}
+
+.sure_sense_navbar{
+	opacity: 0.95;
+}
+
+.title_icon{
+	height: 60px;
+	padding: 5px;
+	padding-left: 10px;
+}
+
+
+.active-indicator{
+	border-top: 3px solid #428bca;
+}
+
+
+.carousel-indicators{
+	left: 50%;
+	top: 10px;
+}
+
+@media (max-width: 768px){
+	.carousel-indicators{
+		bottom: 20px;
+	}
+}
+
+.carousel_form{
+	position: absolute;
+	bottom: 20px;
+	left: 20%;
+	width: 60%;
+	z-index: 20;
+	background: rgba(0, 0, 0, 0.6);
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+.get_in_touch_form{
+	/*
+	position: relative;
+	top: 20px;
+	*/
+}
+
+/*  This formats the form for narrower browsers */
+@media (max-width: 768px){
+	.carousel_form{
+		display: none;
+	}
+		
+	.carousel-caption h1{
+		font-size: 24px;
+	}
+}
+
+/*  This removes this form on a smartphone */
+@media (max-device-width: 640px){
+	.carousel_form{
+		display: none;
+	}
+}
+
+/*  This removes this form on a smartphone */
+@media (max-width: 768px){
+	.get_in_touch_form{
+		display: none;
+	}
+}
+
+.get_in_touch_row{
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.main_message{
+	margin-top: 70px;
+	margin-bottom: 60px;
+	padding-left: 100px;
+	padding-right: 100px;
+}
+
+@media (max-device-width: 768px){
+	.main_message{
+		margin-top: 20px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}
+
+.sub_message{
+	font-size: 35px;
+}
+
+.key_points{
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+.key_points h2,h3,h4 about_header h4{
+	color: #428bca ;  /*#428bca ;   #0000ff*/
+}
+
+#contact_info{
+	padding-left: 40px;
+	color: #5a5a5a;
+	font-weight: 300;
+}
+
+#contact_info h3{
+	color: #5a5a5a;
+	font-weight: 300;
+}
+
+.emphasis_highlight{
+	/*  color: #428bca;  Site Blue Colour */
+	color: #5a5a5a;
+}
+
+.sure-sense-divider{
+	border-top: 1px solid #999;
+	margin-top: 80px !important;
+	margin-bottom: 50px !important;
+}
+
+.sure-sense-app-divider{
+	border-top: 1px solid #999;
+	margin-top: 80px;
+	margin-bottom: 50px;
+}
+
+/*  This reduces the spacing on a smartphone */
+@media (max-device-width: 640px){
+	.sure-sense-divider{
+		margin-top: 40px !important;
+		margin-bottom: 10px !important;
+	}
+
+	.sure-sense-app-divider{
+		margin-top: 40px;
+		margin-bottom: 10px;
+	}
+}
+
+.sure-sense-app-heading{
+	margin-top: 40px;
+	font-weight: 300;
+}
+
+.sure-sense-app-icons{
+	max-height: 225px;
+	width: auto;
+	margin-top: 30px;
+}
+
+@media (max-device-width: 768px){
+	.sure-sense-app-icons{
+		max-height: 125px;
+		margin-top: 10px;
+	}
+}
+
+@media (max-width: 992px){
+	.sure-sense-app-icons{
+		max-height: 175px;
+		margin-top: 70px;
+	}
+}
+
+@media (max-width: 768px){
+	.sure-sense-app-icons{
+		max-height: 175px;
+		margin-top: 10px;
+	}
+}
+
+.ipad-pic{
+	padding-top: 50px;
+}
+
+.sure-sense-pics{
+	max-height: 275px;
+	width: auto;
+	padding-top: 50px;
+}
+
+.sure-sense-pics-paper{
+	position: relative;
+	right: 30px;
+}
+
+@media (max-width: 992px){
+	.sure-sense-pics{
+		max-height: 240px;
+		width: auto;
+		padding-top: 70px;
+	}
+}
+
+@media (max-width: 768px){
+	.sure-sense-pics-paper{
+		right: 0px;
+	}
+}
+
+.sure-sense-pics-iphone{
+	max-height: 325px;
+	width: auto;
+}
+
+.sure-sense-footer{
+	background-color: #5a5a5a;
+	height: 220px;
+	padding: 20px;
+	margin-top: 100px;
+}
+
+@media (max-width: 768px){
+	.sure-sense-footer{
+		height: 500px;
+	}
+}
+
+@media (max-device-width: 640px){
+	.sure-sense-footer{
+		height: 500px;
+	}
+}
+
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header_image{
+	position: relative;
+	border-top: 0px solid white;
+	margin-top: 60px;
+	height: 400px;
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-size: 100% auto;
+	opacity: 1;
+}
+
+@media (max-device-width: 640px){
+	.header_image{
+		margin-top: 20px;
+		height: 300px;
+	}
+}
+
+@media (min-width: 1200px){
+	.header_image{
+		background-size: 1200px;		
+	}
+}
+
+/* ------------------------------------------------ */
+/* ------------ Header Images       --------------- */
+/* ------------------------------------------------ */
+
+.features_image_div{
+	background-image:url('/BS_Site/Images/happy-chef-using-tablet.jpg');
+	
+}
+
+.pricing_image{
+	background-image:url('/BS_Site/Images/Trim Man on Ipad and iPhone.jpg');
+}
+
+.about_image{
+	background-image:url('/pub_images/wash-vegetables.jpg'); 
+}
+
+.contact_image{
+	background-image:url('/BS_Site/Images/contact letterbox.jpg');
+}
+
+@media (min-width: 1100px){
+	.contact_image{
+		background-size: 1100px;
+		
+	}
+}
+
+/* ------------------------------------------------ */
+/* ------------ About Images       --------------- */
+/* ------------------------------------------------ */
+
+.about_main_message{
+	margin-bottom: 40px;
+	margin-top: 70px;
+	padding-left: 100px;
+	padding-right: 100px;
+	font-weight: 300;	
+}
+
+.about_paragraphs{
+	padding-left: 100px;
+	padding-right: 100px;	
+	font-size: 18px !important;
+	font-weight: 300;
+}
+
+.about_intros{
+	font-size: 21px !important;
+	margin-top: 20px;
+	font-weight: 400;
+}
+
+.meet_the_team{
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.meet_the_team_title{
+	margin-bottom: 60px;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+.about_pics{
+	height: 200px;
+	width: auto;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+
+@media (max-width: 992px){
+	.about_main_message{
+		margin-bottom: 40px;
+		margin-top: 50px;
+		padding-left: 50px;
+		padding-right: 50px;	
+	}
+
+	.about_paragraphs{
+		padding-left: 50px;
+		padding-right: 50px;	
+	}
+
+	.about_intros{
+		font-size: 18px;
+	}
+	.meet_the_team{
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	
+	.meet_the_team_title{
+		margin-bottom: 50px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+@media (max-width: 768px){
+	.about_main_message{
+		margin-bottom: 30px;
+		margin-top: 20px;
+		padding-left: 5px;
+		padding-right: 5px;	
+	}
+
+	.about_paragraphs{
+		padding-left: 5px;
+		padding-right: 5px;	
+	}
+
+	.about_intros{
+		font-size: 16px;
+	}
+	
+	.about_pics{
+		max-height: 165px;
+		width: auto;
+		margin-top: 10px;
+	}
+	
+	.meet_the_team{
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+	
+	.meet_the_team_title{
+		margin-bottom: 30px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+
+@media (max-device-width: 768px){
+	.about_pics{
+		max-height: 125px;
+		width: auto;
+		margin-top: 10px;
+	}
+}
+
+
+/* ------------------------------------------------ */
+/* ------------ SaaS Pricing Table  --------------- */
+/* ------------------------------------------------ */
+
+.attr-col { margin: 144px 0 0; float: left; width: 150px; }
+.attr-col ul { background: #f4f4f4; font-weight: normal; font-size: 13px; border: 1px solid #d6d6d6; border-width: 1px 0px 1px 1px; -webkit-border-top-left-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-topleft: 5px; -moz-border-radius-bottomleft: 5px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; }
+.attr-col ul li { text-align: right; padding: 0 10px; border-bottom: 1px solid #d6d6d6; line-height: 45px; display: block; }
+.attr-col ul li.last { border-bottom: none; }
+.pt-table { padding-left: 150px; display: block; position: relative; }
+.pt-body { padding: 10px 0 0; }
+.pt-rows li { display: block; overflow: hidden;background: #fff; border-left: 2px solid #ccc; border-right: 2px solid #ccc; border-bottom: 1px solid #d9d9d9;  }
+.pt-rows li span { width: 33.333%; text-align: center; float: left; border-right: 1px solid #d9d9d9; display: block; line-height: 45px; height: 45px; }
+#right_cell {  border-right: 0px solid #d9d9d9;}
+.pt-rows li.title { 
+	background: #666; 
+	font-size: 22px; 
+	color: #fff; 
+	font-weight: bold; 
+	-webkit-border-top-left-radius: 5px; 
+	-moz-border-radius-topleft: 5px; 
+	border-top-left-radius: 5px; 
+	-webkit-border-top-right-radius: 5px; 
+	-moz-border-radius-topright: 5px; 
+	border-top-right-radius: 5px; 
+	border-width: 0 0 2px;
+	border-bottom: none;
+}
+.pt-rows li.title span { line-height: 50px; height: 50px; border: none; padding: 0 1px; text-shadow: 2px 2px #444; }
+.pt-rows li.fees { height: 85px; border-bottom: 1px solid #ccc; 	border-top: none; }
+.pt-rows li.fees span { line-height: 48px; height: 85px; background: #f7f7f7; font-size: 34px; font-weight: 300; color: #428bca;  }
+
+.pt-rows li.fees span p{ color: #5a5a5a; font-size: 14px; font-weight: 300;}
+
+.pt-rows li span.pt-yes { background: url(yes-no.gif) no-repeat center 12px; }
+.pt-rows li span.pt-no { background: url(yes-no.gif) no-repeat center -38px; }
+.pt-rows li.fin { height: 85px;  border-bottom: 2px solid #d9d9d9; -webkit-border-bottom-right-radius: 5px; -webkit-border-bottom-left-radius: 5px; -moz-border-radius-bottomright: 5px; -moz-border-radius-bottomleft: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px; }
+.pt-rows li span.pt-3x { width: 100%; float: left; text-align: center; border: none; padding-top: 20px; }
+.pt-special { width: 23%; position: absolute; right: 0; top: 0; }
+.pt-special .pt-rows { border-radius: 5px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border: 1px solid #a2b7ca; background: #f4faff;    -moz-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); padding-bottom: 10px; }
+.pt-special .pt-rows li { border-width: 0 0 1px; background: transparent; }
+.pt-special .pt-rows li.title { height: 58px; margin: 1px; background: #d0ebfe; color: #2a719d; font-size: 30px; line-height: 65px; text-align: center; border-bottom: 1px solid #bfd4e6; border-width: 0 0 1px; text-shadow: 2px 2px #e6f5ff; }
+.pt-special .pt-rows li.fees { border-bottom: 1px solid #bcd8ec; }
+.pt-special .pt-rows li.fees span { background: #ecf6fe; }
+.pt-special .pt-rows li.fin {  text-align: center; }
+.pt-special .pt-rows li span { border: none; width: 100%; }
+.pt-special .pt-rows li.fin .big-button { background: #3a8bd0; top: 22px; }
+.pt-special .pt-rows li.fin .big-button:hover { background: #50a6ef; }
+
+
+@media (max-device-width: 640px){
+	
+	.attr-col { margin: 109px 0 0; width: 70px; }
+	.attr-col ul {  font-weight: 300; font-size: 8px;  }
+	.attr-col ul li { padding: 0px; padding-right: 2px; }
+	.pt-table { padding-left: 70px; }
+	.pt-rows li.title { font-size: 12px; font-weight: 300; }
+	.pt-rows li.fees { height: 50px; }
+	.pt-rows li.fees span {  height: 50px; font-size: 20px;  }
+	.pt-rows li.fees span p{ display: none;}
+	.pt-rows li span p {font-size: 8px;}
+	
+}
+
+

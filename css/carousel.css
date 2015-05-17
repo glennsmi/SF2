@@ -1,0 +1,239 @@
+@CHARSET "UTF-8";
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  color: #5a5a5a;
+}
+
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper .container {
+  padding-left: 0;
+  padding-right: 0;
+}
+.navbar-wrapper .navbar {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 400px;
+  margin-bottom: 30px;
+  margin-top: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+
+.carousel-caption {
+	background: rgba(0, 0, 0, 0.6);
+	top: 80px;
+	bottom: 120px;
+	z-index: 10;
+}
+
+.carousel-caption h1{
+	font-size: 24px;
+}
+	
+.carousel-caption p{
+	font-size: 16px;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 400px;
+  background-color: #777;
+}
+
+/*  .carousel-inner > .item > img  */
+
+.carousel_image{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 400px;
+
+}
+
+
+/* Changing the Carousel for the iPhone */
+@media (max-device-width: 640px){
+	.carousel {
+  		height: 200px;
+	}
+	
+	.carousel .item {
+	  height: 200px;
+	}
+	.carousel_image{
+	  min-height: 200px;
+	}
+	
+	.carousel-caption h1{
+		font-size: 18px;
+	}
+	
+	.carousel-caption{
+		top: 45px;
+		bottom: 45px;
+	}
+		
+	.carousel-caption p{
+		display: none;
+	}
+
+}
+
+/* Changing the Carousel for the iPad */
+@media (max-device-width: 1024px){
+	
+
+
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Pad the edges of the mobile views a bit */
+.marketing {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+/* Taking this out to use the thinner font on all headings.
+.marketing h2 {
+  font-weight: normal;
+}
+*/
+
+.marketing .col-lg-4 p {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 100px 0;
+  margin-bottom: 70px; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.about_header{
+	font-weight: 300;
+  	line-height: 1;
+  	letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+
+  /* Remove the edge padding needed for mobile */
+  .marketing {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 10px;
+  }
+  .navbar-wrapper .container {
+    padding-left:  15px;
+    padding-right: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-left:  0;
+    padding-right: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+   .carousel-caption h1{
+		font-size: 30px;
+	}
+  
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+	
+  .about_header{
+    font-size: 35px;
+  }
+  
+  .about_sub_header{
+    font-size: 25px;
+  }
+}
+
+@media (min-width: 992px) {
+  	.carousel-caption h1{
+		font-size: 35px;
+	}
+  	
+  	.carousel-caption p{
+		font-size: 21px;
+	}
+  
+  .featurette-heading {
+    margin-top: 60px;
+  }
+  
+  .about_header{
+    font-size: 40px;
+  }
+  
+  .about_sub_header{
+    font-size: 30px;
+  }
+  
+}
