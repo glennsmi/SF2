@@ -2,6 +2,7 @@
   <head>
 
     <link rel="stylesheet" type="text/css" href="css/silverfox.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
 
 
     <!--Load the AJAX API-->
@@ -148,18 +149,82 @@
   </head>
 
   <body>
-    Pension Pot: <input id="pension_pot"/><br/>
-    Monthly Income: <input id="monthly_income"/><br/>
-    Monthly Spending: <input id="monthly_spending"/><br/>
-    Retirement Age: <input id="retirement_age"/><br/>
-    <button type="button" onclick="calculate();">Calculate</button>
+    <div class="row"></div>
+    
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="input-group">
+          <span class="input-group-addon">£</span>
+          <input type="text" class="form-control" id="pension_pot"  placeholder="Total Pension Pot">
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="input-group">
+          <span class="input-group-addon">£</span>
+          <input type="text" class="form-control" id="monthly_spending"  placeholder="Monthly Outgoings">
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="input-group">
+          <span class="input-group-addon">£</span>
+          <input type="text" class="form-control" id="monthly_income"  placeholder="Other Monthly Income">
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="input-group">
+          <span class="input-group-addon">£</span>
+          <input type="text" class="form-control" id="retirement_age"  placeholder="Age at Retirement">
+        </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    
+    <div class="row" id="calc_button">
+      <div class="col-md-5"></div>
+      <div class="col-md-2">
+        <button type="button" class="btn btn-default center-block" onclick="calculate();">Calculate</button>
+      </div>
+      <div class="col-md-5"></div>
+    </div>
+    
+    
 
     <!--Div that will hold the dashboard-->
-    <div id="dashboard_div" >
+    <div id="dashboard_div"  class="row">
       <!--Divs that will hold each control and chart-->
-      
-      <div id="chart_div"></div>
-      <div id="filter_div"></div>
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div id="chart_div"></div>
+      </div>
+      <div class="col-md-4"></div>
     </div>
+
+    <div id="dashboard_div"  class="row">
+      <!--Divs that will hold each control and chart-->
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div id="filter_div"></div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+    
+
+
   </body>
 </html>
